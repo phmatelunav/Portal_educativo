@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bento-shadow {
+        box-shadow: 8px 8px 0px 0px rgba(13, 242, 51, 0.2);
+    }
+    .bento-shadow-orange {
+        box-shadow: 8px 8px 0px 0px rgba(255, 107, 0, 0.2);
+    }
+    .bento-shadow-purple {
+        box-shadow: 8px 8px 0px 0px rgba(191, 0, 255, 0.2);
+    }
+    
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgba(191, 0, 255, 0.8) }
+    }
+    .animate-typing {
+        overflow: hidden;
+        border-right: .15em solid rgba(191, 0, 255, 0.8);
+        white-space: nowrap;
+        animation: typing 3.5s steps(40, end) infinite alternate, blink-caret .75s step-end infinite;
+    }
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
