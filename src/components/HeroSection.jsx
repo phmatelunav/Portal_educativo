@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import heroCharacterImage from '../assets/hero_character.png';
 import DataExplorationModal from './DataExplorationModal';
+import BotanicZoneModal from './BotanicZoneModal';
 
 export default function HeroSection() {
     const [isDataModalOpen, setIsDataModalOpen] = useState(false);
+    const [isBotanicModalOpen, setIsBotanicModalOpen] = useState(false);
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
@@ -31,10 +33,13 @@ export default function HeroSection() {
 
             {/* Side Stats/Info */}
             <div className="md:col-span-4 grid grid-cols-1 gap-6">
-                <div className="bg-white dark:bg-secondary/10 border-2 border-secondary/20 p-6 rounded-2xl bento-shadow-orange flex flex-col justify-center">
-                    <span className="material-symbols-outlined text-secondary text-4xl mb-2">eco</span>
+                <div 
+                    className="bg-white dark:bg-secondary/10 border-2 border-secondary/20 p-6 rounded-2xl bento-shadow-orange flex flex-col justify-center cursor-pointer hover:bg-secondary/20 dark:hover:bg-secondary/20 hover:border-secondary transition-all group"
+                    onClick={() => setIsBotanicModalOpen(true)}
+                >
+                    <span className="material-symbols-outlined text-secondary text-4xl mb-2 group-hover:scale-110 transition-transform">eco</span>
                     <h3 className="text-2xl font-bold text-secondary">Zona Botánica</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Analiza el crecimiento de especies nativas en tiempo real.</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Analiza el crecimiento de especies frutales en tiempo real.</p>
                 </div>
                 <div 
                     className="bg-white dark:bg-accent/10 border-2 border-accent/20 p-6 rounded-2xl bento-shadow-purple flex flex-col justify-center cursor-pointer hover:border-accent hover:bg-accent/20 dark:hover:bg-accent/20 transition-all group"
@@ -49,6 +54,11 @@ export default function HeroSection() {
             <DataExplorationModal 
                 isOpen={isDataModalOpen} 
                 onClose={() => setIsDataModalOpen(false)} 
+            />
+
+            <BotanicZoneModal
+                isOpen={isBotanicModalOpen}
+                onClose={() => setIsBotanicModalOpen(false)}
             />
         </div>
     );
