@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import heroCharacterImage from '../assets/hero_character.png';
 import DataExplorationModal from './DataExplorationModal';
 import BotanicZoneModal from './BotanicZoneModal';
 
@@ -15,19 +14,21 @@ export default function HeroSection() {
                     <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-4 border border-primary/20">Misión Activa: La Crisis del Cerezo</span>
                     <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-none text-slate-900 dark:text-white">Ciencia <span className="text-primary italic">Agrícola</span> para Mentes Curiosas.</h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl mb-8">Únete a los investigadores del CEAF para descifrar el genoma y salvar nuestros cultivos clave usando la mejor tecnología. ¡La región te necesita!</p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <button className="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(13,242,51,0.4)] transition-all">Iniciar Misión</button>
-                        <button className="bg-slate-800 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-700 transition-all">Ver Tutorial</button>
+                    <div className="flex flex-col lg:flex-row items-center gap-8 mt-8">
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <button className="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(13,242,51,0.4)] transition-all">Iniciar Misión</button>
+                            <button className="bg-slate-800 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-700 transition-all">Ver Tutorial</button>
+                        </div>
+                        
+                        {/* Cyberpunk Icons */}
+                        <div className="flex gap-4 items-center lg:pl-8 lg:border-l-2 border-slate-700/50">
+                            <span className="material-symbols-outlined text-3xl text-emerald-400 hover:text-emerald-300 hover:drop-shadow-[0_0_10px_rgba(52,211,153,0.8)] transition-all cursor-crosshair" title="Terminal Access">laptop_mac</span>
+                            <span className="material-symbols-outlined text-3xl text-purple-400 hover:text-purple-300 hover:drop-shadow-[0_0_10px_rgba(192,132,252,0.8)] transition-all cursor-crosshair" title="Synthetic Reagents">science</span>
+                            <span className="material-symbols-outlined text-3xl text-blue-400 hover:text-blue-300 hover:drop-shadow-[0_0_10px_rgba(96,165,250,0.8)] transition-all cursor-crosshair" title="Genomic Sequence">biotech</span>
+                            <span className="material-symbols-outlined text-3xl text-red-500 hover:text-red-400 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.8)] transition-all cursor-crosshair animate-pulse" title="Microbial Threat">coronavirus</span>
+                            <div className="flex text-2xl drop-shadow-[0_0_10px_rgba(244,63,94,0.5)] hover:drop-shadow-[0_0_15px_rgba(244,63,94,0.8)] transition-all cursor-crosshair" title="Prunus avium">🍒🍒</div>
+                        </div>
                     </div>
-                </div>
-                {/* Pixel Art Character */}
-                <div className="absolute right-[-20px] bottom-[-20px] opacity-20 md:opacity-100 pointer-events-none">
-                    <img 
-                        src={heroCharacterImage} 
-                        alt="Pixel art scientist character with laboratory equipment" 
-                        className="w-80 h-auto object-contain animate-bounce drop-shadow-[0_0_15px_rgba(13,242,51,0.5)]" 
-                        style={{animationDuration: '3s'}} 
-                    />
                 </div>
             </div>
 
