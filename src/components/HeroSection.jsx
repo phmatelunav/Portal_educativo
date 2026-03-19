@@ -21,12 +21,12 @@ export default function HeroSection() {
                         </div>
                         
                         {/* Cyberpunk Icons */}
-                        <div className="flex gap-4 items-center lg:pl-8 lg:border-l-2 border-slate-700/50">
-                            <span className="material-symbols-outlined text-3xl text-emerald-400 hover:text-emerald-300 hover:drop-shadow-[0_0_10px_rgba(52,211,153,0.8)] transition-all cursor-crosshair" title="Terminal Access">laptop_mac</span>
-                            <span className="material-symbols-outlined text-3xl text-purple-400 hover:text-purple-300 hover:drop-shadow-[0_0_10px_rgba(192,132,252,0.8)] transition-all cursor-crosshair" title="Synthetic Reagents">science</span>
-                            <span className="material-symbols-outlined text-3xl text-blue-400 hover:text-blue-300 hover:drop-shadow-[0_0_10px_rgba(96,165,250,0.8)] transition-all cursor-crosshair" title="Genomic Sequence">biotech</span>
-                            <span className="material-symbols-outlined text-3xl text-red-500 hover:text-red-400 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.8)] transition-all cursor-crosshair animate-pulse" title="Microbial Threat">coronavirus</span>
-                            <div className="flex text-2xl drop-shadow-[0_0_10px_rgba(244,63,94,0.5)] hover:drop-shadow-[0_0_15px_rgba(244,63,94,0.8)] transition-all cursor-crosshair" title="Prunus avium">🍒🍒</div>
+                        <div className="flex gap-4 items-center lg:pl-8 lg:border-l-2 border-slate-700/50 text-3xl">
+                            <span className="transition-all cursor-crosshair hover:scale-110" style={{ filter: 'drop-shadow(0 0 10px rgba(52,211,153,0.8))' }} title="Terminal">💻</span>
+                            <span className="transition-all cursor-crosshair hover:scale-110" style={{ filter: 'drop-shadow(0 0 10px rgba(192,132,252,0.8))' }} title="Reactivo">🧪</span>
+                            <span className="transition-all cursor-crosshair hover:scale-110" style={{ filter: 'drop-shadow(0 0 10px rgba(96,165,250,0.8))' }} title="Genoma">🧬</span>
+                            <span className="transition-all cursor-crosshair animate-pulse hover:scale-110" style={{ filter: 'drop-shadow(0 0 10px rgba(239,68,68,0.8))' }} title="Amenaza Biológica">🦠</span>
+                            <span className="transition-all cursor-crosshair hover:scale-110" style={{ filter: 'drop-shadow(0 0 10px rgba(244,63,94,0.8))' }} title="Prunus avium">🍒</span>
                         </div>
                     </div>
                 </div>
